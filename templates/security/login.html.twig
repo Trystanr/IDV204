@@ -3,6 +3,8 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
+<div class="image-container"><img  src="{{ asset('uploads/login3.png') }}" alt="Symfony"/></div>
+<div class="form-container">
 <form method="post">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -13,13 +15,14 @@
             You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
         </div>
     {% endif %}
-
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <div class="heading-container">
+    <h1 class="heading">Welcome back</h1>
+    <h1 class="heading">Login to Sportee</h1>
+    </div>
     <label for="inputUsername" class="sr-only">Username</label>
-    <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+    <input type="text" value="{{ last_username }}" name="username" class="input" placeholder="Username" required autofocus>
     <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
-
+    <input type="password" name="password" class="input" placeholder="Password" required>
     <input type="hidden" name="_csrf_token"
            value="{{ csrf_token('authenticate') }}"
     >
@@ -35,8 +38,11 @@
         </div>
     #}
 
-    <button class="btn btn-lg btn-primary" type="submit">
+    <h2>Forgot password?</h2>
+
+    <button class="login-button" type="submit">
         Sign in
     </button>
+</div>
 </form>
 {% endblock %}

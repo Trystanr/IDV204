@@ -1692,6 +1692,6 @@ class __TwigTemplate_91bc9177c07f59a97ae96294e4ef963735f51816471732ebb8c66c76ed7
     });
 
 /*]]>*/</script>
-", "@WebProfiler/Profiler/base_js.html.twig", "/Applications/MAMP/htdocs/SfCourse/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base_js.html.twig");
+", "@WebProfiler/Profiler/base_js.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base_js.html.twig");
     }
 }

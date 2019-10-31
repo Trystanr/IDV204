@@ -227,6 +227,6 @@ class __TwigTemplate_b97a5df0a9468fe2d3fa917246d85d56783aa2b1a241eff5b89c180a8b8
         {{ include('@Twig/base_js.html.twig') }}
     </body>
 </html>
-", "@Twig/layout.html.twig", "/Applications/MAMP/htdocs/SfCourse/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
+", "@Twig/layout.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
     }
 }

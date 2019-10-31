@@ -162,6 +162,6 @@ class __TwigTemplate_149209398c3e55b7dbe1eb003fa69e14e3abf323581f7fb5a2dd7225062
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: false }) }}
 {% endblock %}
-", "@WebProfiler/Collector/ajax.html.twig", "/Applications/MAMP/htdocs/SfCourse/vendor/symfony/web-profiler-bundle/Resources/views/Collector/ajax.html.twig");
+", "@WebProfiler/Collector/ajax.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/vendor/symfony/web-profiler-bundle/Resources/views/Collector/ajax.html.twig");
     }
 }

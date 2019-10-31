@@ -192,6 +192,6 @@ class __TwigTemplate_374aef79d4c8ce8b60af9632dfdf668e2160eeb2996a67be1f96db0cc05
             {% endfor %}
         </tbody>
     </table>
-{% endblock %}", "post/index.html.twig", "/Applications/MAMP/htdocs/SfCourse/templates/post/index.html.twig");
+{% endblock %}", "post/index.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/templates/post/index.html.twig");
     }
 }

@@ -1175,6 +1175,6 @@ class __TwigTemplate_8e0c24df4398b420868f96cb48cf037940f7e954c54604f4bf0b3fe1119
         <span>{{ route|default(controller) }}</span>
     {%- endif %}
 {% endmacro %}
-", "@WebProfiler/Collector/request.html.twig", "/Applications/MAMP/htdocs/SfCourse/vendor/symfony/web-profiler-bundle/Resources/views/Collector/request.html.twig");
+", "@WebProfiler/Collector/request.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/vendor/symfony/web-profiler-bundle/Resources/views/Collector/request.html.twig");
     }
 }

@@ -113,24 +113,25 @@ class __TwigTemplate_394ee3acbcd9421a483186a34e1ddf598f80d75e5aab85949be0f544ad1
         }
         // line 16
         echo "
-    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
+    <h1 class=\"h3 mb-3 font-weight-normal heading\">Welcome back</h1>
+    <h1 class=\"heading\">Login to Sportee</h1>
     <label for=\"inputUsername\" class=\"sr-only\">Username</label>
     <input type=\"text\" value=\"";
-        // line 19
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 19, $this->source); })()), "html", null, true);
+        // line 20
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 20, $this->source); })()), "html", null, true);
         echo "\" name=\"username\" id=\"inputUsername\" class=\"form-control\" placeholder=\"Username\" required autofocus>
     <label for=\"inputPassword\" class=\"sr-only\">Password</label>
     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Password\" required>
 
     <input type=\"hidden\" name=\"_csrf_token\"
            value=\"";
-        // line 24
+        // line 25
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\"
     >
 
     ";
-        // line 37
+        // line 38
         echo "
     <button class=\"btn btn-lg btn-primary\" type=\"submit\">
         Sign in
@@ -157,7 +158,7 @@ class __TwigTemplate_394ee3acbcd9421a483186a34e1ddf598f80d75e5aab85949be0f544ad1
 
     public function getDebugInfo()
     {
-        return array (  134 => 37,  128 => 24,  120 => 19,  115 => 16,  107 => 13,  104 => 12,  102 => 11,  99 => 10,  93 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  135 => 38,  129 => 25,  121 => 20,  115 => 16,  107 => 13,  104 => 12,  102 => 11,  99 => 10,  93 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -178,7 +179,8 @@ class __TwigTemplate_394ee3acbcd9421a483186a34e1ddf598f80d75e5aab85949be0f544ad1
         </div>
     {% endif %}
 
-    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
+    <h1 class=\"h3 mb-3 font-weight-normal heading\">Welcome back</h1>
+    <h1 class=\"heading\">Login to Sportee</h1>
     <label for=\"inputUsername\" class=\"sr-only\">Username</label>
     <input type=\"text\" value=\"{{ last_username }}\" name=\"username\" id=\"inputUsername\" class=\"form-control\" placeholder=\"Username\" required autofocus>
     <label for=\"inputPassword\" class=\"sr-only\">Password</label>
@@ -204,6 +206,6 @@ class __TwigTemplate_394ee3acbcd9421a483186a34e1ddf598f80d75e5aab85949be0f544ad1
     </button>
 </form>
 {% endblock %}
-", "security/login.html.twig", "/Applications/MAMP/htdocs/SfCourse/templates/security/login.html.twig");
+", "security/login.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/templates/security/login.html.twig");
     }
 }

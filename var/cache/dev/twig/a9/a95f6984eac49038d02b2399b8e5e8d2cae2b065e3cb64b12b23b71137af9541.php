@@ -475,6 +475,6 @@ header .container { display: flex; justify-content: space-between; }
     .hidden-xs-down { display: initial; }
     .help-link { margin-left: 30px; }
 }
-", "@Twig/exception.css.twig", "/Applications/MAMP/htdocs/SfCourse/vendor/symfony/twig-bundle/Resources/views/exception.css.twig");
+", "@Twig/exception.css.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/vendor/symfony/twig-bundle/Resources/views/exception.css.twig");
     }
 }

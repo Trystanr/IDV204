@@ -45,6 +45,7 @@ final class Versions
   'psr/container' => '1.0.0@b7ce3b176482dbbc1245ebf52b181af44c2cf55f',
   'psr/log' => '1.1.0@6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd',
   'sensio/framework-extra-bundle' => 'v5.4.1@585f4b3a1c54f24d1a8431c729fc8f5acca20c8a',
+  'symfony/asset' => 'v4.3.5@3f97e57596884f7b9158d564a533112a0d19dbdd',
   'symfony/cache' => 'v4.3.5@40c62600ebad1ed2defbf7d35523d918a73ab330',
   'symfony/cache-contracts' => 'v1.1.7@af50d14ada9e4e82cfabfabdc502d144f89be0a1',
   'symfony/config' => 'v4.3.5@0acb26407a9e1a64a275142f0ae5e36436342720',

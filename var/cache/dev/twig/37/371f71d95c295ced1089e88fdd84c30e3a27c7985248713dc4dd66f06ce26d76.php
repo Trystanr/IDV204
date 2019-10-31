@@ -103,6 +103,6 @@ class __TwigTemplate_50276f3f924a6c44a0c25f360ac753ca75fc8cbc42ecd3efc3fa7cccf7d
 
     {{ form(form) }}
 
-{% endblock %}", "post/create.html.twig", "/Applications/MAMP/htdocs/SfCourse/templates/post/create.html.twig");
+{% endblock %}", "post/create.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/templates/post/create.html.twig");
     }
 }

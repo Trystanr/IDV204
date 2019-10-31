@@ -490,6 +490,6 @@ class __TwigTemplate_8e967e1412163ebcecebf86df73c4a18c152e5a763d15ed50ebbb4dea6a
         {% endif %}
     </div>
 </div>
-", "@Twig/Exception/exception.html.twig", "/Applications/MAMP/htdocs/SfCourse/vendor/symfony/twig-bundle/Resources/views/Exception/exception.html.twig");
+", "@Twig/Exception/exception.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/vendor/symfony/twig-bundle/Resources/views/Exception/exception.html.twig");
     }
 }

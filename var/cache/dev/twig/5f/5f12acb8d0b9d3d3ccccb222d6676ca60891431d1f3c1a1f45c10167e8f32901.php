@@ -108,6 +108,6 @@ class __TwigTemplate_42c92f2d877d02c5d479596fd1acb7b1eff2e697abc7e17635b87fd10b6
     <h1>{{post.title}}</h1>
     <em>{{ post.category }}</em>
     <img src=\"{{'/uploads/' ~ post.image}}\" >
-{% endblock %}", "post/show.html.twig", "/Applications/MAMP/htdocs/SfCourse/templates/post/show.html.twig");
+{% endblock %}", "post/show.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/templates/post/show.html.twig");
     }
 }

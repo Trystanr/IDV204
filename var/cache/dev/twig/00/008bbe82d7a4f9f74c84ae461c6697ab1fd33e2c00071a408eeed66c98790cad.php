@@ -97,6 +97,6 @@ class __TwigTemplate_dae01cb5baa418c0f223bdf1d668cb89fd00de7d4c544491fc373411c95
         return new Source("{% extends ('base.html.twig') %}
 {% block body %}
 <h1>Hey {{ name }}</h1>
-{% endblock %}", "home/custom.html.twig", "/Applications/MAMP/htdocs/SfCourse/templates/home/custom.html.twig");
+{% endblock %}", "home/custom.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/templates/home/custom.html.twig");
     }
 }

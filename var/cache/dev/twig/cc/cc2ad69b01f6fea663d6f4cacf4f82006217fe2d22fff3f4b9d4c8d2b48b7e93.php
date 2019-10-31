@@ -95,6 +95,6 @@ class __TwigTemplate_3493a64e606935a36a5177c4dea2292b82a9c015fb95c5a9a4f59e872b5
         return new Source("{% extends ('base.html.twig') %}
 {% block body %}
 <h1>Welcome form twig</h1>
-{% endblock %}", "home/index.html.twig", "/Applications/MAMP/htdocs/SfCourse/templates/home/index.html.twig");
+{% endblock %}", "home/index.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/templates/home/index.html.twig");
     }
 }

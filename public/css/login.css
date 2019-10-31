@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap');
+body {
+    font-family: 'Muli', sans-serif;
+    background-color: #fafbfc;
+}
+
+.image-container {
+    width: 60%;
+    float: left;
+    margin-top: 30px;
+}
+
+.image-container img {
+    width: 650px;
+    padding: 40px;
+}
+
+.form-container {
+    width: 30%;
+    float: left;
+    margin-top: 150px;
+}
+
+.heading {
+    font-family: 'Muli', sans-serif;
+    font-size: 40px;
+    letter-spacing: 0.5px;
+    font-weight: 800;
+    line-height: 40px;
+}
+
+.input {
+    background-color: #e8e8f9;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8f9;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 12px;
+    color: black;
+}
+
+.input:focus {
+    outline: none !important;
+    border: none !important;
+    background-color: #e8e8f9;
+}
+
+.login-button {
+    background-color: #291d89;
+    width: 25%;
+    height: 38px;
+    border: 1px solid #291d89;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px;
+    font-weight: 600;
+    float: right;
+    letter-spacing: 1px;
+}
+
+.login-button:hover {
+    cursor: pointer;
+}
+
+.login-button:focus {
+    outline: none;
+}
+
+.heading-container {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-family: 'Muli', sans-serif;
+    font-size: 14px;
+    float: left;
+    margin-top: 10px;
+}
+
+h1 {
+    font-family: 'Muli', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.navbar-brand {
+    font-size: 15px;
+    margin-left: 20px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.navbar {
+    width: 70%;
+}
+
+.block {
+    width: 60%;
+    min-height: 80px;
+    border: 0.5px solid #eaeaea;
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: white;
+}
+
+.question {
+    display: grid;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    float: left;
+}
+
+.category {
+    font-size: 11px;
+    color: #291d89;
+    background-color: #e8e8f9;
+    border-radius: 5px;
+    height: 20px;
+    min-width: 20px;
+    float: left;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.votes {
+    min-height: 40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    align-items: baseline;
+    padding: 10px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #291d89;
+}
+
+.delete {
+    background-color: #291d89;
+    width: 90px;
+    height: 30px;
+    border-radius: 30px;
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+    margin-left: 80%;
+    margin-bottom: 20px;
+}
+
+.text-danger {
+    color: white !important;
+    font-weight: 300;
+}
+
+.question-container {
+    background-color: white;
+    width: 62%;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.line {
+    width: 97%;
+    margin: 0 auto;
+    height: 1px;
+    background-color: #eaeaea;
+    margin-bottom: 25px;
+}
+
+h3 {
+    display: inline;
+    margin-right: 20px;
+    font-size: 13px;
+    color: grey;
+    float: right;
+}
+
+.container {
+    max-width: 90%;
+    margin-top: 30px;
+}
+
+
+/* 
+<div class="delete">
+<a class="text-danger" href="{{ path('post.delete', {id: post.id}) }}">
+     Delete
+</a></div> */

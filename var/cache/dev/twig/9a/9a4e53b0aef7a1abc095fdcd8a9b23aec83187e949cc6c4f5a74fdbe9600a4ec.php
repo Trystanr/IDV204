@@ -49,15 +49,17 @@ class __TwigTemplate_4c51433c27f8201c0acc2425dd3168e76b60a61f59a44d0007334f7e1fd
     <meta charset=\"UTF-8\">
     <link rel=\"stylesheet\"
     href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\">
+     <link rel=\"stylesheet\"
+    href=\"./public/css/login.css\">
     ";
-        // line 7
+        // line 9
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 8
+        // line 10
         echo "</head>
 <body>
     <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
     <a class=\"navbar-brand\" href=\"";
-        // line 11
+        // line 13
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">Swag</a>
     <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
@@ -68,39 +70,39 @@ class __TwigTemplate_4c51433c27f8201c0acc2425dd3168e76b60a61f59a44d0007334f7e1fd
         <ul class=\"navbar-nav mr-auto\">
         <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"";
-        // line 19
+        // line 21
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("custom", ["name" => "dude"]);
         echo "\">Greet Dude</a>
         </li>
         ";
-        // line 21
+        // line 23
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 22
+            // line 24
             echo "        <li class=\"nav-item float-right\">
             <a class=\"nav-link\" href=\"";
-            // line 23
+            // line 25
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">Log Out</a>
         </li>
         ";
         }
-        // line 26
+        // line 28
         echo "        </ul>
     </div>
     </nav>
     <div class=''></div>
     <div class='container'>
     ";
-        // line 31
+        // line 33
         $this->displayBlock('body', $context, $blocks);
-        // line 32
+        // line 34
         echo "    </div>
     
     
     ";
-        // line 35
+        // line 37
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 36
+        // line 38
         echo "</body>
 </html>";
         
@@ -111,7 +113,7 @@ class __TwigTemplate_4c51433c27f8201c0acc2425dd3168e76b60a61f59a44d0007334f7e1fd
 
     }
 
-    // line 7
+    // line 9
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -129,7 +131,7 @@ class __TwigTemplate_4c51433c27f8201c0acc2425dd3168e76b60a61f59a44d0007334f7e1fd
 
     }
 
-    // line 31
+    // line 33
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -147,7 +149,7 @@ class __TwigTemplate_4c51433c27f8201c0acc2425dd3168e76b60a61f59a44d0007334f7e1fd
 
     }
 
-    // line 35
+    // line 37
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -177,7 +179,7 @@ class __TwigTemplate_4c51433c27f8201c0acc2425dd3168e76b60a61f59a44d0007334f7e1fd
 
     public function getDebugInfo()
     {
-        return array (  151 => 35,  133 => 31,  115 => 7,  104 => 36,  102 => 35,  97 => 32,  95 => 31,  88 => 26,  82 => 23,  79 => 22,  77 => 21,  72 => 19,  61 => 11,  56 => 8,  54 => 7,  46 => 1,);
+        return array (  153 => 37,  135 => 33,  117 => 9,  106 => 38,  104 => 37,  99 => 34,  97 => 33,  90 => 28,  84 => 25,  81 => 24,  79 => 23,  74 => 21,  63 => 13,  58 => 10,  56 => 9,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -188,6 +190,8 @@ class __TwigTemplate_4c51433c27f8201c0acc2425dd3168e76b60a61f59a44d0007334f7e1fd
     <meta charset=\"UTF-8\">
     <link rel=\"stylesheet\"
     href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\">
+     <link rel=\"stylesheet\"
+    href=\"./public/css/login.css\">
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
@@ -218,6 +222,6 @@ class __TwigTemplate_4c51433c27f8201c0acc2425dd3168e76b60a61f59a44d0007334f7e1fd
     
     {% block javascripts %}{% endblock %}
 </body>
-</html>", "base.html.twig", "/Applications/MAMP/htdocs/SfCourse/templates/base.html.twig");
+</html>", "base.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/templates/base.html.twig");
     }
 }

@@ -164,6 +164,6 @@ class __TwigTemplate_20e123c35ca2c30a29595429bf1454df3a6c0e0790bbaafc3f69d4dd1ff
         {% block body '' %}
     </body>
 </html>
-", "@WebProfiler/Profiler/base.html.twig", "/Applications/MAMP/htdocs/SfCourse/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
+", "@WebProfiler/Profiler/base.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
     }
 }
