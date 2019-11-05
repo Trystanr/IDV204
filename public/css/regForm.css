@@ -1,0 +1,19 @@
+/*-------------------*/
+/*   FORM STYLING    */
+/*-------------------*/
+
+#regForm {
+
+}
+
+#regForm label {
+    color: red;
+}
+
+#regForm input[type="text"], #regForm input[type="password"] {
+    height: 20px;
+}
+
+#regForm button {
+    border-radius: 0;
+}
