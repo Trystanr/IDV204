@@ -1,7 +1,13 @@
 {% extends('base.html.twig') %}
 
 {% block body %}
-    <h1>{{post.title}}</h1>
-    <em>{{ post.category }}</em>
-    <img src="{{'/uploads/' ~ post.image}}" >
+<div class="question-container">
+    <h1 class="title">{{post.title}}</h1>
+    <h3>Asked by</h3>
+    <div class="category">{{ post.category }}</div>
+    <div class="line"></div>
+   
+    <img class="post" src="{{'/uploads/' ~ post.image}}" >
+
+</div>
 {% endblock %}
