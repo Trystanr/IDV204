@@ -1,4 +1,12 @@
 {% extends ('base.html.twig') %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+{% endblock %}
+
 {% block body %}
-<h1>Hey {{ name }}</h1>
+<div class="profile-container">
+<img  src="{{ asset('uploads/profile.jpg') }}" alt="Symfony"/>
+<h1>{{ name }}</h1>
+</div>
 {% endblock %}
