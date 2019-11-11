@@ -10,7 +10,18 @@ body {
     margin-top: 30px;
 }
 
+.image-container2 {
+    width: 40%;
+    float: left;
+    margin-top: 30px;
+}
+
 .image-container img {
+    width: 650px;
+    padding: 40px;
+}
+
+.image-container2 img {
     width: 650px;
     padding: 40px;
 }
@@ -19,6 +30,14 @@ body {
     width: 30%;
     float: left;
     margin-top: 150px;
+}
+
+.form-container2 {
+    width: 31%;
+    float: left;
+    margin-top: 150px;
+    margin-right: 140px;
+    margin-left: 60px;
 }
 
 .heading {
