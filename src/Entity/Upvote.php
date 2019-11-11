@@ -26,6 +26,19 @@ class Upvote
      */
     private $postId;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Upvote", inversedBy="post")
+     * @ORM\JoinTable(name="upvotes",
+     * joinColumns={
+        @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+       },
+       inverseJoinColumns={
+        @ORM\JoinColumn(name="post_id", referencedColumnName="id")
+       }
+       )
+     */
+    private $upvotes;
+
     public function getId(): ?int
     {
         return $this->id;

@@ -1,18 +1,62 @@
 {% extends('base.html.twig') %}
 
 {% block body %}
-<div class="question-container">
-    <h1 class="title">{{post.title}}</h1>
-    <h3>Asked by</h3>
-    <div class="category">{{ post.category }}</div>
-    <div class="line"></div>
-   
-    <img class="post" src="{{'/uploads/' ~ post.image}}" >
 
-    <div class="row">
-        <ul>
+<div class='container' id="q-cont">
+	<div id="post-body">
+		<div class="question-container">
+		    <h1 class="title">{{post.title}}</h1>
+		    <h3>Asked by</h3>
+		    <div class="category">{{ post.category }}</div>
+		    <div class="line"></div>
+		    <img class="post" src="{{'/uploads/' ~ post.image}}" >
+		</div>
 
-        </ul>
-    </div>
+		<div class="post-comments">
+			<h1 class="title">Comments</h1>
+			<br>
+					<form>
+				    	<textarea class="input" rows="4" cols="50"></textarea> 
+				    	<button type="submit" class="login-button">Post</button>
+				    </form>
+
+			        <ul>
+			        	<li>
+			        		<div class="user">
+			        			<img src="/uploads/27c4f7c85ade55d1fa038bab00795ffc.jpeg">
+			        			<h3>Username</h3>
+			        		</div>
+			        		
+			        		<h4>This penalty situation will vary depending on the penalty, and where the penalty is enforced.
+			        		<br>
+			        		<br>
+							Long and short of it: if the Penalty distance is more than half the distance from the spot the foul is enforced to the offender's goal line, it is "Half distance to the Goal".</h4>
+			        	</li>
+			        	<li>
+			        		<div class="user">
+			        			<img src="/uploads/27c4f7c85ade55d1fa038bab00795ffc.jpeg">
+			        			<h3>Username</h3>
+			        		</div>
+			        		
+			        		<h4>This penalty situation will vary depending on the penalty, and where the penalty is enforced.
+			        		<br>
+			        		<br>
+							Long and short of it: if the Penalty distance is more than half the distance from the spot the foul is enforced to the offender's goal line, it is "Half distance to the Goal".</h4>
+			        	</li>
+			        	<li>
+			        		<div class="user">
+			        			<img src="/uploads/27c4f7c85ade55d1fa038bab00795ffc.jpeg">
+			        			<h3>Username</h3>
+			        		</div>
+			        		
+			        		<h4>This penalty situation will vary depending on the penalty, and where the penalty is enforced.
+			        		<br>
+			        		<br>
+							Long and short of it: if the Penalty distance is more than half the distance from the spot the foul is enforced to the offender's goal line, it is "Half distance to the Goal".</h4>
+			        	</li>
+			        </ul>
+		</div>
+	</div>
 </div>
+	
 {% endblock %}
