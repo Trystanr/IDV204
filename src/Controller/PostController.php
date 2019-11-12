@@ -10,12 +10,21 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+use Psr\Log\LoggerInterface;
+
 /**
  * * @Route("/post", name="post.")
 */
 
 class PostController extends AbstractController
-{
+{   
+    private $logger;
+
+    public function __construct(LoggerInterface $logger)
+    {
+        $this->logger = $logger;
+    }
+
     /**
      * @Route("/", name="index")
      */
