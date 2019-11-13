@@ -36,10 +36,14 @@ return [
                         .'|(*:124)'
                     .')'
                 .')'
-                .'|/custom(?:/([^/]++))?(*:155)'
+                .'|/c(?'
+                    .'|ustom(?:/([^/]++))?(*:158)'
+                    .'|ategory/([^/]++)(*:182)'
+                .')'
                 .'|/post/(?'
-                    .'|show/([^/]++)(*:185)'
-                    .'|delete/([^/]++)(*:208)'
+                    .'|category/([^/]++)(*:217)'
+                    .'|show/([^/]++)(*:238)'
+                    .'|delete/([^/]++)(*:261)'
                 .')'
             .')/?$}sDu',
     ],
@@ -50,9 +54,11 @@ return [
         101 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception::showAction'], ['token'], null, null, false, false, null]],
         114 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'], ['token'], null, null, false, false, null]],
         124 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        155 => [[['_route' => 'custom', 'name' => null, '_controller' => 'App\\Controller\\MainController::custom'], ['name'], null, null, false, true, null]],
-        185 => [[['_route' => 'post.show', '_controller' => 'App\\Controller\\PostController::show'], ['id'], null, null, false, true, null]],
-        208 => [
+        158 => [[['_route' => 'custom', 'name' => null, '_controller' => 'App\\Controller\\MainController::custom'], ['name'], null, null, false, true, null]],
+        182 => [[['_route' => 'category_route', '_controller' => 'App\\Controller\\PostController::findByCat'], ['cat'], null, null, false, true, null]],
+        217 => [[['_route' => 'post.category', '_controller' => 'App\\Controller\\PostController::findByCat'], ['cat'], null, null, false, true, null]],
+        238 => [[['_route' => 'post.show', '_controller' => 'App\\Controller\\PostController::show'], ['id'], null, null, false, true, null]],
+        261 => [
             [['_route' => 'post.delete', '_controller' => 'App\\Controller\\PostController::remove'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

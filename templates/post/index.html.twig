@@ -7,7 +7,9 @@
         {{ message }}
     </div>
     {% endfor %}
-    <h1>All Questions</h1>
+    <h1>
+        {{catName}}
+    </h1>
     <a href="./create" class="button">Ask a Question</a>
     
     <div id="list-container">
@@ -25,7 +27,7 @@
                         Delete
                     </a>
                 </div> -->
-                <div class="category">{{ post.category }}</div>
+                <div class="category"><a href="{{ path('category_route', {cat: post.category.id}) }}">{{ post.category }}</a></div>
 
                 <div class="votes-container">
                     <div class="votes">

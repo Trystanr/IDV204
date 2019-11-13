@@ -17,10 +17,12 @@ return [
     'home' => [[], ['_controller' => 'App\\Controller\\MainController::index'], [], [['text', '/']], [], []],
     'custom' => [['name'], ['name' => null, '_controller' => 'App\\Controller\\MainController::custom'], [], [['variable', '/', '[^/]++', 'name', true], ['text', '/custom']], [], []],
     'post.index' => [[], ['_controller' => 'App\\Controller\\PostController::index'], [], [['text', '/post/']], [], []],
+    'post.category' => [['cat'], ['_controller' => 'App\\Controller\\PostController::findByCat'], [], [['variable', '/', '[^/]++', 'cat', true], ['text', '/post/category']], [], []],
     'post.create' => [[], ['_controller' => 'App\\Controller\\PostController::create'], [], [['text', '/post/create']], [], []],
     'post.show' => [['id'], ['_controller' => 'App\\Controller\\PostController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/post/show']], [], []],
     'post.delete' => [['id'], ['_controller' => 'App\\Controller\\PostController::remove'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/post/delete']], [], []],
     'register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
+    'category_route' => [['cat'], ['_controller' => 'App\\Controller\\PostController::findByCat'], [], [['variable', '/', '[^/]++', 'cat', true], ['text', '/category']], [], []],
 ];

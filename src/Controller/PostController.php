@@ -34,7 +34,22 @@ class PostController extends AbstractController
         $posts = $postRepository->findAll();
 
         return $this->render('post/index.html.twig', [
-            'posts' => $posts
+            'posts' => $posts,
+            'catName' => "All Questions"
+        ]);
+    }
+
+    /**
+     * @Route("/category/{cat}", name="category")
+     */
+    public function findByCat(PostRepository $postRepository, $cat)
+    {
+
+        $posts = $postRepository->findPostWithCategory($cat);
+
+        return $this->render('post/index.html.twig', [
+            'posts' => $posts,
+            'catName' => $cat
         ]);
     }
 
@@ -54,6 +69,9 @@ class PostController extends AbstractController
              //entity manager
             
             $em = $this->getDoctrine()->getManager();
+
+            $post->setUser($this->getUser());
+            
             //** @var UploadedFile $file  */
             $file = $request->files->get('post')['attachment'];
 
