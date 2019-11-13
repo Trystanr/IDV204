@@ -4,6 +4,15 @@ body {
     background-color: #fafbfc;
 }
 
+.container {
+    max-width: 90%;
+    margin-top: 30px;
+}
+
+.container#q-cont {
+    max-width: 85%;
+}
+
 .image-container {
     width: 60%;
     float: left;
@@ -94,6 +103,12 @@ body {
     margin-bottom: 30px;
 }
 
+h1 {
+    font-family: 'Muli', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+}
+
 h2 {
     font-family: 'Muli', sans-serif;
     font-size: 14px;
@@ -101,10 +116,13 @@ h2 {
     margin-top: 10px;
 }
 
-h1 {
-    font-family: 'Muli', sans-serif;
-    font-size: 40px;
-    font-weight: 800;
+h3 {
+    display: inline;
+    margin-right: 20px;
+    font-size: 13px;
+    color: #b5b5b5;
+    float: right;
+    font-weight: 300;
 }
 
 .navbar-brand {
@@ -132,14 +150,106 @@ h1 {
     margin-bottom: 10px;
 }
 
-.title {
+#post-body {
+    display: flex;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.post-comments {
+    width: 20vw;
+    margin-left: 30px;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-comments .title {
+    float: none;
+    width: 100%;
+}
+
+.post-comments form {
+    display: flex;
+}
+
+.post-comments form button {
+    align-self: flex-end;
+    margin-left: 10px;
+}
+
+.post-comments form textarea {
+    margin-bottom: 0px;
+    height: 50px;
+}
+
+.post-comments ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.post-comments ul li {
+    padding: 10px;
+    border: 1px solid #291d891a;
+    /* background-color: #291c89; */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.post-comments ul li .user {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.post-comments ul li img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    border-radius: 1000px;
+}
+
+.post-comments ul li h3 {
+    display: block;
+    float: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #291c89;
+}
+
+.post-comments ul li h4 {
+    display: block;
+    float: none;
+    font-size: 14px;
+    color: #291c89;
+    padding: 0;
+    margin: 0;
+}
+
+.question-container {
+    background-color: white;
+    width: 60vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.question-container .title,
+.post-comments .title {
     font-weight: 700;
     color: black;
     text-decoration: none;
     float: left;
+    font-size: 30px;
 }
 
-.category {
+.question-container .category {
     font-size: 11px;
     color: #291d89;
     background-color: #e8e8f9;
@@ -150,6 +260,14 @@ h1 {
     padding: 2px;
     padding-left: 10px;
     padding-right: 10px;
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+.question-container img {
+    width: 33vw;
+    height: auto;
+    align-self: center;
 }
 
 .votes {
@@ -182,33 +300,12 @@ a:hover {
     font-weight: 300;
 }
 
-.question-container {
-    background-color: white;
-    width: 62%;
-    padding: 20px;
-    margin-top: 30px;
-    border-radius: 10px;
-}
-
 .line {
     width: 97%;
-    margin: 0 auto;
     height: 1px;
     background-color: #eaeaea;
     margin-bottom: 25px;
-}
-
-h3 {
-    display: inline;
-    margin-right: 20px;
-    font-size: 13px;
-    color: grey;
-    float: right;
-}
-
-.container {
-    max-width: 90%;
-    margin-top: 30px;
+    align-self: center;
 }
 
 
@@ -217,3 +314,19 @@ h3 {
 <a class="text-danger" href="{{ path('post.delete', {id: post.id}) }}">
      Delete
 </a></div> */
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+    .question-container {
+        background-color: white;
+        width: 95vw;
+        padding: 20px;
+        margin-top: 30px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+}

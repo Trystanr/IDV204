@@ -20,12 +20,27 @@ class RegistrationController extends AbstractController
     {
 
         $form =  $this->createFormBuilder()
-        ->add('username')
+        ->add('username', null, [
+                'attr' => [
+                        'placeholder' => 'Username'
+                ]
+            ]
+        )
         ->add('password', RepeatedType::class, [
             'type' => PasswordType::class,
             'required' => true,
-            'first_options' => ['label' => 'Password'],
-            'second_options' => ['label' => 'Repeat Password'],
+            'first_options' => [
+                'label' => 'Password',
+                'attr' => [
+                        'placeholder' => 'Password'
+                ]
+            ],
+            'second_options' => [
+                'label' => 'Repeat Password',
+                'attr' => [
+                        'placeholder' => 'Repeat Password'
+                ]
+            ],
         ])
         ->add('register', SubmitType::class, [
             'attr' => [
