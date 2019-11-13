@@ -15,13 +15,28 @@
 		<div class="post-comments">
 			<h1 class="title">Comments</h1>
 			<br>
-					<form>
+					<form id="comment-form">
 				    	<textarea class="input" rows="4" cols="50"></textarea> 
-				    	<button type="submit" class="login-button">Post</button>
+				    	<button type="submit" class="login-button" id="comment-button">Post</button>
 				    </form>
 
+				    {{form(form)}}
+
+				    
 			        <ul>
-			        	<li>
+			        	{% if post.comment is not null %}
+			        	    <li>
+			        	    	<div class="user">
+			        	    		<img src="/uploads/27c4f7c85ade55d1fa038bab00795ffc.jpeg">
+			        	    		<h3>{{post.comment.user.username}}</h3>
+			        	    	</div>
+			        	    	
+			        	    	<h4>
+			        	    		{{post.comment.commentText}}
+			        	    	</h4>
+			        	    </li>
+			        	{% endif %}
+			        	<!-- <li>
 			        		<div class="user">
 			        			<img src="/uploads/27c4f7c85ade55d1fa038bab00795ffc.jpeg">
 			        			<h3>Username</h3>
@@ -42,18 +57,7 @@
 			        		<br>
 			        		<br>
 							Long and short of it: if the Penalty distance is more than half the distance from the spot the foul is enforced to the offender's goal line, it is "Half distance to the Goal".</h4>
-			        	</li>
-			        	<li>
-			        		<div class="user">
-			        			<img src="/uploads/27c4f7c85ade55d1fa038bab00795ffc.jpeg">
-			        			<h3>Username</h3>
-			        		</div>
-			        		
-			        		<h4>This penalty situation will vary depending on the penalty, and where the penalty is enforced.
-			        		<br>
-			        		<br>
-							Long and short of it: if the Penalty distance is more than half the distance from the spot the foul is enforced to the offender's goal line, it is "Half distance to the Goal".</h4>
-			        	</li>
+			        	</li> -->
 			        </ul>
 		</div>
 	</div>

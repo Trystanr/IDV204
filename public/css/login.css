@@ -92,6 +92,10 @@ body {
     margin-bottom: 10px;
 }
 
+.button:hover {
+    color: #fff;
+}
+
 .login-button {
     background-color: #291d89;
     width: 25%;
@@ -154,8 +158,10 @@ h2 {
 }
 
 .question {
-    display: grid;
+    display: flex;
     margin-bottom: 10px;
+
+        justify-content: space-between;
 }
 
 #post-body {
@@ -279,6 +285,8 @@ h2 {
 
     line-height: initial;
     font-size: 30px;
+
+    padding-right: 5vw;
 }
 
 .question-container .category {
@@ -350,7 +358,7 @@ a:hover {
 }
 
 .text-danger {
-    color: white !important;
+    /*color: white !important;*/
     font-weight: 300;
 }
 

@@ -2,26 +2,23 @@
 
 namespace App\Form;
 
+use App\Entity\Comment;
+
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ReplyType extends AbstractType
+class CommentType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('reply', TextType::class, [
-                'attr'=> [
-                    'class' => 'form-contol'
-
-                ]
-            ])
-            ->add('category', EntityType::class, [
-                'class' => Category::class
+            ->add('commentText', TextType::class, [
+                    'required' => false
             ])
             ->add('submit', SubmitType::class, [
                 'attr' => [

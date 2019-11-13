@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Post;
+use App\Entity\Comment;
 use App\Form\PostType;
+use App\Form\CommentType;
 use App\Repository\PostRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -47,9 +49,11 @@ class PostController extends AbstractController
 
         $posts = $postRepository->findPostWithCategory($cat);
 
+        $categoryName = $postRepository->findSingle($cat);
+
         return $this->render('post/index.html.twig', [
             'posts' => $posts,
-            'catName' => $cat
+            'catName' => $categoryName
         ]);
     }
 
@@ -103,11 +107,33 @@ class PostController extends AbstractController
      * @Route("/show/{id}", name="show")
      * @return Response
      */
-    public function show(Post $post){
+    public function show(Post $post, Request $request){
         //create the show view
 
+        $comm = new Comment();
+
+        $form = $this->createForm(CommentType::class, $post);
+
+        $form->handleRequest($request);
+
+            if ($form->isSubmitted() && $form->isValid()) {
+
+                $em = $this->getDoctrine()->getManager();
+
+                $comm->setUser($this->getUser());
+
+                $comm->setCommentText($post->getCommentText());
+
+                $post->setComment($comm);
+
+                $em->persist($comm);
+                $em->flush();
+
+            }
+
         return $this->render('post/show.html.twig', [
-            'post' => $post
+            'post' => $post,
+            'form' => $form->createView()
         ]);
     }
 

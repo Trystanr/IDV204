@@ -3,8 +3,10 @@
 namespace App\Repository;
 
 use App\Entity\Post;
+use App\Entity\Comment;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
+
 
 /**
  * @method Post|null find($id, $lockMode = null, $lockVersion = null)
@@ -28,6 +30,27 @@ class PostRepository extends ServiceEntityRepository
         $query = $qb->getQuery();
 
         return $query->execute();
+    }
+
+    public function findSingle(int $cat){   
+
+        $qb = $this->createQueryBuilder('p')
+            ->where('p.category = :cat')
+            ->setParameter('cat', $cat)
+            ->setMaxResults(1);
+
+        $query = $qb->getQuery();
+
+        $res = $query->getOneOrNullResult();
+
+        return $res->getCategory()->getName();
+    }
+
+    public function addComment(string $CommentString) {
+        $com = Comment;
+
+        $com->setComment("Hello");
+        $com->setUser($this->getUser());
     }
 
     // /**

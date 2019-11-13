@@ -37,6 +37,25 @@ class Post
      */
     private $user;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Comment", inversedBy="post")
+     */
+    private $comment;
+
+    private $commentText;
+
+    public function getCommentText(): ?string
+    {
+        return $this->commentText;
+    }
+
+    public function setCommentText(string $commentText): self
+    {
+        $this->commentText = $commentText;
+
+        return $this;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,5 +109,16 @@ class Post
         return $this;
     }
 
+    public function getComment(): ?Comment
+    {
+        return $this->comment;
+    }
+
+    public function setComment(?Comment $comment): self
+    {
+        $this->comment = $comment;
+
+        return $this;
+    }
 
 }

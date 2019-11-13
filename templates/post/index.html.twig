@@ -21,12 +21,11 @@
                 <div class="profile-image"></div>
                 <div class="question">
                     <a class="title" href="{{path('post.show', {id: post.id}) }}">{{ post.title}}</a>
-                </div>
-                <!-- <div class="delete">
                     <a class="text-danger" href="{{ path('post.delete', {id: post.id}) }}">
-                        Delete
+                        X
                     </a>
-                </div> -->
+                </div>
+                
                 <div class="category"><a href="{{ path('category_route', {cat: post.category.id}) }}">{{ post.category }}</a></div>
 
                 <div class="votes-container">
