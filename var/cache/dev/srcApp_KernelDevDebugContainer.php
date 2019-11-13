@@ -6,6 +6,10 @@ if (\class_exists(\ContainerU0VVEaN\srcApp_KernelDevDebugContainer::class, false
     // no-op
 } elseif (!include __DIR__.'/ContainerU0VVEaN/srcApp_KernelDevDebugContainer.php') {
     touch(__DIR__.'/ContainerU0VVEaN.legacy');
+if (\class_exists(\ContainerLcBkia5\srcApp_KernelDevDebugContainer::class, false)) {
+    // no-op
+} elseif (!include __DIR__.'/ContainerLcBkia5/srcApp_KernelDevDebugContainer.php') {
+    touch(__DIR__.'/ContainerLcBkia5.legacy');
 
     return;
 }
@@ -19,3 +23,11 @@ return new \ContainerU0VVEaN\srcApp_KernelDevDebugContainer([
     'container.build_id' => '63a34f57',
     'container.build_time' => 1573465854,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerU0VVEaN');
+    \class_alias(\ContainerLcBkia5\srcApp_KernelDevDebugContainer::class, srcApp_KernelDevDebugContainer::class, false);
+}
+
+return new \ContainerLcBkia5\srcApp_KernelDevDebugContainer([
+    'container.build_hash' => 'LcBkia5',
+    'container.build_id' => 'deced4a4',
+    'container.build_time' => 1573468010,
+], __DIR__.\DIRECTORY_SEPARATOR.'ContainerLcBkia5');

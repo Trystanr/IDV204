@@ -75,6 +75,23 @@ body {
     background-color: #e8e8f9;
 }
 
+.button {
+    background-color: #291d89;
+    /*width: 25%;*/
+    /*height: 38px;*/
+    border: 1px solid #291d89;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
 .login-button {
     background-color: #291d89;
     width: 25%;
@@ -159,6 +176,7 @@ h3 {
 .post-comments {
     width: 20vw;
     margin-left: 30px;
+    border-radius: 10px;
     background-color: #fff;
     padding: 20px;
     display: flex;
@@ -316,16 +334,38 @@ a:hover {
 </a></div> */
 
 @media (max-width: 600px) {
-    .container {
+    .image-container {
+        display: none;
+    }
+    .form-container {
+        width: 100%;
+    }
+    .container#q-cont {
         max-width: 100%;
         margin-top: 30px;
+    }
+    #post-body {
+        flex-direction: column;
+        padding: 0;
     }
     .question-container {
         background-color: white;
         width: 95vw;
         padding: 20px;
         margin-top: 30px;
+        margin-bottom: 10px;
         border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .question-container img {
+        width: 70vw;
+    }
+    .post-comments {
+        width: 95vw;
+        margin-left: 0;
+        background-color: #fff;
+        padding: 20px;
         display: flex;
         flex-direction: column;
     }
