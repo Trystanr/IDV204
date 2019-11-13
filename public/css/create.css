@@ -24,6 +24,7 @@
     font-weight: 700;
     padding-top: 10px;
     padding-left: 20px;
+    padding-bottom: 10px;
 }
 
 .post-button {
@@ -96,4 +97,21 @@
 
 .form-group {
     width: 100%;
+}
+
+ul {
+    list-style-type: decimal;
+}
+
+li {
+    line-height: 2.5;
+}
+
+.line2 {
+    width: 95%;
+    height: 1px;
+    background-color: #291d891a;
+    margin-bottom: 20px;
+    align-self: center;
+    margin-left: 10px;
 }

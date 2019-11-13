@@ -32,7 +32,7 @@ class PostType extends AbstractType
             ->add('category', EntityType::class, [
                 'class' => Category::class 
             ])
-            ->add('save', SubmitType::class, [
+            ->add('ask', SubmitType::class, [
                 'attr' => [
                     'class' => 'post-button'
                 ]

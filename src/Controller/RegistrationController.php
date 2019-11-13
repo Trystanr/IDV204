@@ -26,6 +26,12 @@ class RegistrationController extends AbstractController
                 ]
             ]
         )
+        ->add('email', null, [
+            'attr' => [
+                    'placeholder' => 'Email address'
+            ]
+        ]
+        )
         ->add('password', RepeatedType::class, [
             'type' => PasswordType::class,
             'required' => true,
@@ -56,6 +62,7 @@ class RegistrationController extends AbstractController
             
             $user = new User();
             $user->setUsername($data['username']);
+            $user->setEmail($data['email']);
             $user->setPassword(
                 $passwordEncoder->encodePassword($user, $data['password'])
             );
