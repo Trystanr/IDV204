@@ -413,6 +413,6 @@ class __TwigTemplate_e7404f594cdf43a8629810d96e53b2449b2d2c25aebb5820d77c5e9ad85
 {% block body %}
     {% include '@Twig/Exception/exception.html.twig' %}
 {% endblock %}
-", "@Twig/Exception/exception_full.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/vendor/symfony/twig-bundle/Resources/views/Exception/exception_full.html.twig");
+", "@Twig/Exception/exception_full.html.twig", "/Users/Luke/Documents/GitHub/IDV204/vendor/symfony/twig-bundle/Resources/views/Exception/exception_full.html.twig");
     }
 }

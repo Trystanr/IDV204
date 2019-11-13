@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
@@ -48,6 +49,13 @@ class RegistrationController extends AbstractController
                 ]
             ],
         ])
+        ->add('attachment', FileType::class, [
+            'mapped' => false,
+            'attr' => [
+                'placeholder' => 'Upload An Image'
+            ]
+            
+        ])
         ->add('register', SubmitType::class, [
             'attr' => [
                 'class' => 'btn btn-success float-right'
@@ -57,7 +65,7 @@ class RegistrationController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted()){
-
+            $em = $this->getDoctrine()->getManager();
             $data =  $form->getData();
             
             $user = new User();
@@ -66,8 +74,22 @@ class RegistrationController extends AbstractController
             $user->setPassword(
                 $passwordEncoder->encodePassword($user, $data['password'])
             );
-            dump($user);
-            $em = $this->getDoctrine()->getManager();
+            
+            //** @var UploadedFile $file  */
+            $file = $request->files->get('user')['attachment'];
+
+            if($file){
+                $filename = md5(uniqid()) . '.' . $file->guessClientExtension();
+                $file->move(
+                    $this->getParameter('uploads_dir'),
+                    $filename
+                );
+
+                $user->setImage($filename);
+                dump($user);
+                dump($request->files);
+                
+            };
 
             $em->persist($user);
             $em->flush();

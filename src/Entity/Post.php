@@ -45,7 +45,7 @@ class Post
     private $commentText;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="integer", length=255)
      */
     private $viewCounter = 0;
 
@@ -134,6 +134,18 @@ class Post
     public function setViewCount(?int $views): self
     {
         $this->viewCounter = $views;
+
+        return $this;
+    }
+
+    public function getViewCounter(): ?int
+    {
+        return $this->viewCounter;
+    }
+
+    public function setViewCounter(int $viewCounter): self
+    {
+        $this->viewCounter = $viewCounter;
 
         return $this;
     }

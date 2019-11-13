@@ -1688,8 +1688,8 @@
     },
     {
         "name": "symfony/asset",
-        "version": "v4.3.5",
-        "version_normalized": "4.3.5.0",
+        "version": "v4.3.8",
+        "version_normalized": "4.3.8.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/asset.git",

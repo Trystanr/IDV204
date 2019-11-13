@@ -222,6 +222,6 @@ class __TwigTemplate_d851e3c3d1075c26b7a9b3bd9fab6d835b68d663e45eebce6b0c8689966
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/exception.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
+", "@WebProfiler/Collector/exception.html.twig", "/Users/Luke/Documents/GitHub/IDV204/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
     }
 }

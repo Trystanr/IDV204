@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -39,6 +41,11 @@ class Upvote
      */
     private $upvotes;
 
+    public function __construct()
+    {
+        $this->upvotes = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -64,6 +71,32 @@ class Upvote
     public function setPostId(string $postId): self
     {
         $this->postId = $postId;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Upvote[]
+     */
+    public function getUpvotes(): Collection
+    {
+        return $this->upvotes;
+    }
+
+    public function addUpvote(Upvote $upvote): self
+    {
+        if (!$this->upvotes->contains($upvote)) {
+            $this->upvotes[] = $upvote;
+        }
+
+        return $this;
+    }
+
+    public function removeUpvote(Upvote $upvote): self
+    {
+        if ($this->upvotes->contains($upvote)) {
+            $this->upvotes->removeElement($upvote);
+        }
 
         return $this;
     }

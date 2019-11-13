@@ -161,6 +161,6 @@ class __TwigTemplate_fe9c4307e2951edb1f6fb3c9752dc245ef15c5a00cdbcb39a5d8e2e984f
         </tr>
     </tbody>
 </table>
-", "@Twig/Exception/traces_text.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/vendor/symfony/twig-bundle/Resources/views/Exception/traces_text.html.twig");
+", "@Twig/Exception/traces_text.html.twig", "/Users/Luke/Documents/GitHub/IDV204/vendor/symfony/twig-bundle/Resources/views/Exception/traces_text.html.twig");
     }
 }
