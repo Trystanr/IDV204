@@ -33,10 +33,7 @@ class Comment
      */
     private $post;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Relpy", mappedBy="com")
-     */
-    private $replies;
+    
 
     public function __construct()
     {
@@ -84,23 +81,7 @@ class Comment
         return $this;
     }
 
-    /**
-     * @return Collection|Reply[]
-     */
-    public function getReplies(): Collection
-    {
-        return $this->replies;
-    }
-
-    public function addReply(Reply $reply): self
-    {
-        if (!$this->replies->contains($reply)) {
-            $this->replies[] = $reply;
-            $reply->setCom($this);
-        }
-
-        return $this;
-    }
+   
 
     public function removePost(Post $post): self
     {

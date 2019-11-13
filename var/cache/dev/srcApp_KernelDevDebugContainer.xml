@@ -3609,14 +3609,16 @@
         <argument key="authenticationUtils" type="service" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.ihHHRMT" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.PV_mMxZ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Controller\PostController::findByCat" type="service" id=".service_locator.bY1MqeR"/>
         <argument key="App\Controller\PostController::index" type="service" id=".service_locator.bY1MqeR"/>
         <argument key="App\Controller\PostController::remove" type="service" id=".service_locator.TwhmRPL"/>
         <argument key="App\Controller\PostController::show" type="service" id=".service_locator.TwhmRPL"/>
         <argument key="App\Controller\RegistrationController::register" type="service" id=".service_locator.lm3AYgL"/>
         <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.EbLunuf"/>
+        <argument key="App\Controller\PostController:findByCat" type="service" id=".service_locator.bY1MqeR"/>
         <argument key="App\Controller\PostController:index" type="service" id=".service_locator.bY1MqeR"/>
         <argument key="App\Controller\PostController:remove" type="service" id=".service_locator.TwhmRPL"/>
         <argument key="App\Controller\PostController:show" type="service" id=".service_locator.TwhmRPL"/>
@@ -3841,12 +3843,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.ihHHRMT"/>
+      <argument type="service" id=".service_locator.PV_mMxZ"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.ihHHRMT"/>
+      <argument type="service" id=".service_locator.PV_mMxZ"/>
     </service>
     <service id=".service_locator.UwRI0uT" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
@@ -4166,7 +4168,7 @@
     <service id="security.authentication.session_strategy.main" alias="security.authentication.session_strategy"/>
     <service id="security.user_checker.main" alias="security.user_checker" public="false"/>
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.ihHHRMT"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.PV_mMxZ"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger" public="false"/>
