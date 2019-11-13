@@ -17,6 +17,8 @@ body {
     width: 60%;
     float: left;
     margin-top: 30px;
+
+
 }
 
 .image-container2 {
@@ -73,6 +75,24 @@ body {
     outline: none !important;
     border: none !important;
     background-color: #e8e8f9;
+}
+
+.button {
+    background-color: #291d89;
+    /*width: 25%;*/
+    /*height: 38px;*/
+    border: 1px solid #291d89;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
 .login-button {
@@ -341,6 +361,14 @@ a:hover {
 
 
 @media (max-width: 600px) {
+    .image-container {
+        display: none;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+    
     .container#q-cont {
         max-width: 100%;
         margin-top: 30px;
