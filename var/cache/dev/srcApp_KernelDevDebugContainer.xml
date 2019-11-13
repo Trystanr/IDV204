@@ -1471,14 +1471,6 @@
         <argument>2048</argument>
       </call>
       <call method="addListener">
-        <argument>console.command</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
         <argument>kernel.exception</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
@@ -2961,9 +2953,30 @@
         <argument>null</argument>
       </call>
       <call method="add">
-        <argument type="service" id=".security.request_matcher.PhQgZ9B"/>
+        <argument type="service" id=".security.request_matcher.1kVKA1R"/>
         <argument type="collection">
           <argument>ROLE_USER</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.Z1jy2a5"/>
+        <argument type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.dk_W7pc"/>
+        <argument type="collection">
+          <argument>ROLE_ADMIN</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.PhQgZ9B"/>
+        <argument type="collection">
+          <argument>IS_AUTHENTICATED_ANONYMOUSLY</argument>
         </argument>
         <argument>null</argument>
       </call>
@@ -3405,6 +3418,15 @@
     </service>
     <service id=".security.request_matcher.O7Tsk.w" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
       <argument>^/register</argument>
+    </service>
+    <service id=".security.request_matcher.1kVKA1R" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/post/</argument>
+    </service>
+    <service id=".security.request_matcher.Z1jy2a5" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/category/</argument>
+    </service>
+    <service id=".security.request_matcher.dk_W7pc" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/post/delete/</argument>
     </service>
     <service id=".security.request_matcher.PhQgZ9B" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
       <argument>^/</argument>

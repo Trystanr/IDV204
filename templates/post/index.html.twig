@@ -19,9 +19,11 @@
                 <div class="profile-image"></div>
                 <div class="question">
                     <a class="title" href="{{path('post.show', {id: post.id}) }}">{{ post.title }}</a>
+                    {% if is_granted('ROLE_ADMIN') %}
                     <a class="text-danger" href="{{ path('post.delete', {id: post.id}) }}">
                         X
                     </a>
+                    {% endif %}
                 </div>
                 
                 <div class="category"><a href="{{ path('category_route', {cat: post.category.id}) }}">{{ post.category }}</a></div>

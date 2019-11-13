@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 use Psr\Log\LoggerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 /**
  * * @Route("/post", name="post.")
@@ -146,6 +147,7 @@ class PostController extends AbstractController
 
     /**
      * @Route("/delete/{id}", name="delete")
+     * @IsGranted("ROLE_ADMIN")
      * @return Response
      */
     public function remove(Post $post){
