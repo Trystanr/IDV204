@@ -16,16 +16,25 @@ class PostType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
+            ->add('title', null, [
+                'attr' => [
+                        'placeholder' => 'Type your question here'
+                ]
+            ]
+        )
             ->add('attachment', FileType::class, [
-                'mapped' => false
+                'mapped' => false,
+                'attr' => [
+                    'placeholder' => 'Browse image'
+                ]
+                
             ])
             ->add('category', EntityType::class, [
-                'class' => Category::class
+                'class' => Category::class 
             ])
             ->add('save', SubmitType::class, [
                 'attr' => [
-                    'class' => 'btn btn-primary float-right'
+                    'class' => 'post-button'
                 ]
             ])
         ;

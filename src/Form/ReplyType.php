@@ -20,9 +20,7 @@ class ReplyType extends AbstractType
 
                 ]
             ])
-            ->add('category', EntityType::class, [
-                'class' => Category::class
-            ])
+            ->add('comment', HiddenType::class) 
             ->add('submit', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-primary float-right'

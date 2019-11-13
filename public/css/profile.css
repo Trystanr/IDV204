@@ -84,7 +84,8 @@
 }
 
 .summary .sum-head {
-    font-size: 16px;
+    font-size: 35px;
+    margin-bottom: -10px;
     font-weight: 700;
 }
 
