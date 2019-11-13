@@ -91,8 +91,13 @@
     background-color: #e8e8f9;
 }
 
+
 .form-group .required {
     display: none;
+}
+
+.form-group .required {
+    display: block;
 }
 
 .form-group {

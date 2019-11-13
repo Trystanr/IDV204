@@ -109,6 +109,11 @@ class PostController extends AbstractController
      */
     public function show(Post $post, Request $request){
         //create the show view
+        $em = $this->getDoctrine()->getManager();
+        
+        $views = $post->getViewCount();
+        $post->setViewCount($views + 1);
+        
 
         $comm = new Comment();
 
@@ -118,7 +123,7 @@ class PostController extends AbstractController
 
             if ($form->isSubmitted() && $form->isValid()) {
 
-                $em = $this->getDoctrine()->getManager();
+                
 
                 $comm->setUser($this->getUser());
 
@@ -127,9 +132,11 @@ class PostController extends AbstractController
                 $post->setComment($comm);
 
                 $em->persist($comm);
-                $em->flush();
 
             }
+
+        $em->persist($post);
+        $em->flush();
 
         return $this->render('post/show.html.twig', [
             'post' => $post,

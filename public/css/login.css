@@ -186,7 +186,7 @@ h2 {
 }
 
 .post-comments form {
-    display: flex;
+    /*display: flex;*/
 }
 
 .post-comments form button {

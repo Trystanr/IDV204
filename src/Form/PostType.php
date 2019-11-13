@@ -30,7 +30,9 @@ class PostType extends AbstractType
                 
             ])
             ->add('category', EntityType::class, [
-                'class' => Category::class 
+                'class' => Category::class,
+                'expanded' => true,
+                'multiple' => false
             ])
             ->add('ask', SubmitType::class, [
                 'attr' => [

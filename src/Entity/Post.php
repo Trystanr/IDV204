@@ -44,6 +44,11 @@ class Post
 
     private $commentText;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $viewCounter = 0;
+
     public function getCommentText(): ?string
     {
         return $this->commentText;
@@ -121,4 +126,15 @@ class Post
         return $this;
     }
 
+    public function getViewCount(): ?int
+    {
+        return $this->viewCounter;
+    }
+
+    public function setViewCount(?int $views): self
+    {
+        $this->viewCounter = $views;
+
+        return $this;
+    }
 }

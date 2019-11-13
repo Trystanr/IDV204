@@ -5,8 +5,8 @@
 <div class='container' id="q-cont">
 	<div id="post-body">
 		<div class="question-container">
-		    <h1 class="title">{{post.title}}</h1>
-		    <h3>Asked by {{post.user.username}}</h3>
+		    <h1 class="title">{{ post.title }}</h1>
+		    <h3>Asked by {{ post.user.username }}</h3>
 		    <div class="category"><a href="{{ path('category_route', {cat: post.category.id}) }}">{{ post.category }}</a></div>
 		    <div class="line"></div>
 		    <img class="post" src="{{'/uploads/' ~ post.image}}" >
@@ -15,12 +15,12 @@
 		<div class="post-comments">
 			<h1 class="title">Comments</h1>
 			<br>
-					<form id="comment-form">
+					<!-- <form id="comment-form">
 				    	<textarea class="input" rows="4" cols="50"></textarea> 
 				    	<button type="submit" class="login-button" id="comment-button">Post</button>
-				    </form>
+				    </form> -->
 
-				    {{form(form)}}
+				    {{ form(form) }}
 
 				    
 			        <ul>
@@ -28,11 +28,11 @@
 			        	    <li>
 			        	    	<div class="user">
 			        	    		<img src="/uploads/27c4f7c85ade55d1fa038bab00795ffc.jpeg">
-			        	    		<h3>{{post.comment.user.username}}</h3>
+			        	    		<h3>{{ post.comment.user.username }}</h3>
 			        	    	</div>
 			        	    	
 			        	    	<h4>
-			        	    		{{post.comment.commentText}}
+			        	    		{{ post.comment.commentText }}
 			        	    	</h4>
 			        	    </li>
 			        	{% endif %}
