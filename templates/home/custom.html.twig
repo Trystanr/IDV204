@@ -1,4 +1,54 @@
-{% extends ('base.html.twig') %}
-{% block body %}
-<h1>Hey {{ name }}</h1>
+{% extends ('base.html.twig') %} {% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/profile.css') }}"> {% endblock %} {% block body %}
+<div class="container">
+    <div class="profile-container">
+        <div class="profile"><img src="{{ asset('uploads/profile.jpg') }}" alt="Symfony" /></div>
+        <h1 class="head">James Patterson</h1>
+        <div class="line"></div>
+
+        <div class="profile-content">
+            <div class="comment">
+                <h6 class="num">11</h6>
+                <h6>comments</h6>
+            </div>
+            <div class="vote">
+                <h6 class="num">201</h6>
+                <h6>votes</h6>
+            </div>
+        </div>
+        <h5>Edit my profile</h5>
+    </div>
+
+    <div class="profile-detail">
+
+        <div class="summary">
+            <div class="sum-head">Questions</div>
+            <div class="line"></div>
+            <div class="question-sum">
+                <img src="{{ asset('uploads/profile.jpg') }}" alt="Symfony" />
+                <h2 class="question-head">Who is the fullback for Wales?</h2>
+            </div>
+            <div class="question-sum">
+                <img src="{{ asset('uploads/profile.jpg') }}" alt="Symfony" />
+                <h2 class="question-head">Who is the fullback for Wales?</h2>
+            </div>
+
+            <div class="sum-head">Comments</div>
+            <div class="line"></div>
+
+            <div class="comment-sum">
+                <div>
+                    <img src="{{ asset('uploads/profile.jpg') }}" alt="Symfony" />
+                    <h2 class="question">Who is the fullback for Wales?</h2>
+                </div>
+                <div class="comment-container">
+                    <img src="{{ asset('uploads/profile.jpg') }}" alt="Symfony" />
+                    <h2 class="comment">Liam Williams</h2>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
 {% endblock %}
