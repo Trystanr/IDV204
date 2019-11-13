@@ -1,8 +1,23 @@
-{% extends('base.html.twig') %}
+{% extends ('base.html.twig') %} {% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/create.css') }}"> {% endblock %} {% block body %}
 
-{% block body %}
-	
-	<div class='container'>
-    {{ form(form) }}
+<div class='container'>
+    <h1>Ask Question</h1>
+    <div class="ask-main">
+        <div class="ask-container">
+            {{ form(form) }}
+        </div>
+        <div class="rules-container">
+            <div class="rule">Rules</div>
+            <div class="line2"></div>
+            <ul>
+                <li>Remember the human</li>
+                <li>Behave like you would in real life</li>
+                <li>Ask only questions related to sport</li>
+                <li>Look for the original source of content</li>
+                <li>Search for duplicates before posting</li>
+            </ul>
+        </div>
     </div>
+</div>
 {% endblock %}

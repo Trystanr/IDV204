@@ -1,6 +1,4 @@
-{% extends('base.html.twig') %}
-
-{% block body %}
+{% extends('base.html.twig') %} {% block body %}
 <div class='container'>
     {% for message in app.flashes('success') %}
     <div class="alert alert-success">
@@ -11,7 +9,7 @@
         {{catName}}
     </h1>
     <a href="./create" class="button">Ask a Question</a>
-    
+
     <div id="list-container">
         <div class="question-container">
             {% for post in posts %}
@@ -48,7 +46,7 @@
         </div>
 
         <div class="feature-container">
-            
+
         </div>
     </div>
 </div>
