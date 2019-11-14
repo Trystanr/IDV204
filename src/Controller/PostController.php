@@ -73,6 +73,8 @@ class PostController extends AbstractController
         $s3 = new S3Client([
             'version'  => 'latest',
             'region'   => 'eu-north-1',
+            'key' => getenv('AWS_ACCESS_KEY_ID'),
+            'secret' => getenv('AWS_SECRET_ACCESS_KEY')
         ]);
 
         $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!');
