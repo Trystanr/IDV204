@@ -39,3 +39,10 @@ var/cache/dev/srcApp_KernelDevDebugContainer.xml.meta
 var/cache/dev/srcApp_KernelDevDebugContainerCompiler.log
 var/cache/dev/UrlGenerator.php.meta
 var/cache/dev/UrlMatcher.php.meta
+var/cache/dev/profiler/index.csv
+var/cache/dev/srcApp_KernelDevDebugContainer.php
+var/cache/dev/srcApp_KernelDevDebugContainer.php.meta
+var/cache/dev/srcApp_KernelDevDebugContainer.xml
+var/cache/dev/srcApp_KernelDevDebugContainer.xml.meta
+var/cache/dev/srcApp_KernelDevDebugContainerCompiler.log
+var/*
