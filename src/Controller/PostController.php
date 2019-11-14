@@ -102,12 +102,6 @@ class PostController extends AbstractController
 
                     $key = $filename;
 
-                    $result = $s3->putObject([
-                        'Bucket' => $bucket,
-                        'Key'    => $key,
-                        'SourceFile' => $file
-                    ]);
-
                 } catch(Exception $e) {
 
                 }
