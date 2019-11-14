@@ -12,7 +12,13 @@
     display: none;
 }
 
+#regForm .custom-file label {
+    display: block;
+}
+
 #regForm input[type="text"],
+#regForm input[type="email"],
+#regForm input[type="file"],
 #regForm input[type="password"] {
     background-color: #e8e8f9;
     margin-bottom: 20px;
