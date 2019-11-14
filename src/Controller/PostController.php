@@ -18,6 +18,7 @@ use Psr\Log\LoggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 use Aws\S3\S3Client;
+use Aws\Credentials\Credentials;
 
 /**
  * * @Route("/post", name="post.")
