@@ -20,7 +20,7 @@
         <h4>User is banned</h4>
         {% endif %} {% if isProfile %}
 
-        <a class="profile-button" href="{{ path('profile_edit_route') }}">Edit my profile</a> {% else %} {% if is_granted('ROLE_ADMIN') %} {% if user.isBanned == 1 %}
+        <a class="profile-button" href="{{ path('edit') }}">Edit my profile</a> {% else %} {% if is_granted('ROLE_ADMIN') %} {% if user.isBanned == 1 %}
         <a class="profile-button" href="{{ path('unban', {id: user.id}) }}">Unban User</a> {% endif %} {% if user.isBanned == 0 %}
         <a class="profile-button ban-button" href="{{ path('ban', {id: user.id}) }}">Ban User</a> {% endif %} {% endif %} {% endif %}
 

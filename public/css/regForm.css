@@ -14,6 +14,19 @@
 
 #regForm .custom-file label {
     display: block;
+    background-color: #e8e8f9;
+    font-size: 12px;
+    padding: 10px;
+    color: #6c757c;
+
+    outline: 0;
+    border: 0;
+}
+
+#regForm .custom-file-label::after {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    height: auto;
 }
 
 #regForm input[type="text"],

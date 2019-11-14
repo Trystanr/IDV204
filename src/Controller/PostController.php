@@ -7,6 +7,7 @@ use App\Entity\Comment;
 use App\Form\PostType;
 use App\Form\CommentType;
 use App\Repository\PostRepository;
+use App\Repository\CategoryRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -45,12 +46,12 @@ class PostController extends AbstractController
     /**
      * @Route("/category/{cat}", name="category")
      */
-    public function findByCat(PostRepository $postRepository, $cat)
+    public function findByCat(PostRepository $postRepository,CategoryRepository $categoryRepository, $cat)
     {
 
         $posts = $postRepository->findPostWithCategory($cat);
 
-        $categoryName = $postRepository->findSingle($cat);
+        $categoryName = $categoryRepository->find($cat)->getName();
 
         return $this->render('post/index.html.twig', [
             'posts' => $posts,

@@ -65,7 +65,13 @@ class PostRepository extends ServiceEntityRepository
 
         $res = $query->getOneOrNullResult();
 
-        return $res->getCategory()->getName();
+        if ($res == null) {
+            return "Empty Category" . $cat;
+        } else {
+            return $res->getCategory()->getName();
+
+        }
+
     }
 
     public function addComment(string $CommentString) {
