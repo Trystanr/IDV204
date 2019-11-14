@@ -9,6 +9,8 @@ use App\Form\RegisterType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
+use Aws\S3\S3Client;
+
 class RegistrationController extends AbstractController
 {
     /**
@@ -16,6 +18,13 @@ class RegistrationController extends AbstractController
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
+        $s3 = new S3Client([
+            'version'  => 'latest',
+            'region'   => 'eu-north-1'
+        ]);
+
+        $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!');
+
         $form = $this->createForm(RegisterType::class);
         $form->handleRequest($request);
 
@@ -39,7 +48,20 @@ class RegistrationController extends AbstractController
                 );
 
                 $user->setImage($filename);
-                
+
+                try {
+                    $upload = $s3->putObject([
+                        'Bucket' => $bucket, // REQUIRED
+                        'Key' => $filename, // REQUIRED
+                        'SourceFile' => $this->getParameter('uploads_dir').$filename,
+                        'ContentType' => 'image/jpeg',
+                        'ACL' => 'public-read'
+                    ]);
+
+                    $key = $filename;
+                } catch(Exception $e) {
+
+                }
             }
 
             $em = $this->getDoctrine()->getManager();
