@@ -70,11 +70,12 @@ class PostController extends AbstractController
         // create a new post with title
         $post = new Post();
 
+        $credentials = new Aws\Credentials\Credentials('AKIAIBLUPXSU6HFSK3SQ', 'lHD86lwAtR/HsWZiDk4EQS2GHON5LodvFdVD4pVO');
+
         $s3 = new S3Client([
             'version'  => 'latest',
             'region'   => 'eu-north-1',
-            'key' => getenv('AWS_ACCESS_KEY_ID'),
-            'secret' => getenv('AWS_SECRET_ACCESS_KEY')
+            'credentials' => $credentials
         ]);
 
         $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!');
