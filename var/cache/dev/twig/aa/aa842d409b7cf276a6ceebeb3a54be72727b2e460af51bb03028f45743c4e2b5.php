@@ -482,6 +482,6 @@ class __TwigTemplate_39f25720653d0b8310f18b34cc8549127672d6512c3b8b18aea54dc3419
         {% endfor %}
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/events.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/vendor/symfony/web-profiler-bundle/Resources/views/Collector/events.html.twig");
+", "@WebProfiler/Collector/events.html.twig", "/Users/Luke/Documents/GitHub/IDV204/vendor/symfony/web-profiler-bundle/Resources/views/Collector/events.html.twig");
     }
 }

@@ -204,6 +204,6 @@ class __TwigTemplate_38985d76b2f33e9ed255ee4acdc83abb24258af195d3adcf1b1fe4af40b
         })|raw }}
     </div>
 {% endif %}
-", "@Twig/Exception/trace.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/vendor/symfony/twig-bundle/Resources/views/Exception/trace.html.twig");
+", "@Twig/Exception/trace.html.twig", "/Users/Luke/Documents/GitHub/IDV204/vendor/symfony/twig-bundle/Resources/views/Exception/trace.html.twig");
     }
 }

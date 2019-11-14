@@ -8,7 +8,7 @@ Developed for Open Window in 2019.
 
 ```php bin/console doctrine:migrations:migrate```
 
-```php bin/console doctrine:schema:update```
+```php bin/console doctrine:schema:update --Force```
 
 ## Usage:
 

@@ -155,6 +155,6 @@ class __TwigTemplate_b376987c27fb872c88d41cb52b9c68806c6d2de90f26110f5c1e56130eb
 {% block panel %}
     {{ render(path('_profiler_router', { token: token })) }}
 {% endblock %}
-", "@WebProfiler/Collector/router.html.twig", "/Users/CarmenSeesink/Desktop/IDV204-master/vendor/symfony/web-profiler-bundle/Resources/views/Collector/router.html.twig");
+", "@WebProfiler/Collector/router.html.twig", "/Users/Luke/Documents/GitHub/IDV204/vendor/symfony/web-profiler-bundle/Resources/views/Collector/router.html.twig");
     }
 }
