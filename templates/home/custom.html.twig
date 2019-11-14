@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="{{ asset('css/profile.css') }}"> {% endblock %} {% block body %}
 <div class="container">
     <div class="profile-container">
-        <div class="profile"><img src="{{'/uploads/' ~ user.image}}" alt="Symfony" /></div>
+        <div class="profile"><img src="{{'https://sportee.s3.eu-north-1.amazonaws.com/' ~ user.image}}" alt="Symfony" /></div>
         <h1 class="head">{{user.username}}</h1>
         <div class="line"></div>
         <div class="profile-content">
@@ -35,7 +35,7 @@
             {% for post in posts %}
             <div class="question-sum">
                 <a href="{{path('post.show', {id: post.id}) }}">
-                    <img src="{{'/uploads/' ~ user.image}}" alt="Symfony" />
+                    <img src="{{'https://sportee.s3.eu-north-1.amazonaws.com/' ~ user.image}}" alt="Symfony" />
                     <h2 class="question-head">{{ post.title }}</h2>
                 </a>
             </div>

@@ -27,7 +27,7 @@
 			        	{% if post.comment is not null %}
 			        	    <li>
 			        	    	<div class="user">
-			        	    		<img src="{{'/uploads/' ~ post.comment.user.image}}">
+			        	    		<img src="{{'https://sportee.s3.eu-north-1.amazonaws.com/' ~ post.comment.user.image}}">
 			        	    		<h3><a href="{{ path('user_route', {id: post.comment.user.id}) }}">{{ post.comment.user.username }}</a></h3>
 			        	    	</div>
 			        	    	
