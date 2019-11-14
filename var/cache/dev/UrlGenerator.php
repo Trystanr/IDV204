@@ -25,4 +25,5 @@ return [
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
     'category_route' => [['cat'], ['_controller' => 'App\\Controller\\PostController::findByCat'], [], [['variable', '/', '[^/]++', 'cat', true], ['text', '/category']], [], []],
+    'question_create_route' => [[], ['_controller' => 'App\\Controller\\PostController::create'], [], [['text', '/create']], [], []],
 ];

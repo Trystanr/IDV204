@@ -19,6 +19,7 @@ return [
         '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
+        '/create' => [[['_route' => 'question_create_route', '_controller' => 'App\\Controller\\PostController::create'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

@@ -76,6 +76,8 @@ class PostController extends AbstractController
             $em = $this->getDoctrine()->getManager();
 
             $post->setUser($this->getUser());
+
+            $post->setCommentText("");
             
             //** @var UploadedFile $file  */
             $file = $request->files->get('post')['attachment'];
@@ -124,11 +126,11 @@ class PostController extends AbstractController
 
             if ($form->isSubmitted() && $form->isValid()) {
 
-                
-
                 $comm->setUser($this->getUser());
 
-                $comm->setCommentText($post->getCommentText());
+                $newCom = $post->getCommentText();
+                // $newCom = nl2br($newCom, false);
+                $comm->setCommentText($newCom);
 
                 $post->setComment($comm);
 
