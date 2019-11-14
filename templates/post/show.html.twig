@@ -9,7 +9,7 @@
 		    <h3>Asked by <a href="{{ path('user_route', {id: post.user.id}) }}"> <img src="{{'/uploads/' ~ post.user.image}}"> {{ post.user.username }}</a></h3>
 		    <div class="category"><a href="{{ path('category_route', {cat: post.category.id}) }}">{{ post.category }}</a></div>
 		    <div class="line"></div>
-		    <img class="post" src="{{'/uploads/' ~ post.image}}" >
+		    <img class="post" src="{{'https://sportee.s3.eu-north-1.amazonaws.com/' ~ post.image}}" >
 		</div>
 
 		<div class="post-comments">
