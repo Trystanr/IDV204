@@ -7,14 +7,18 @@
         <div class="line"></div>
         <div class="profile-content">
             <div class="comment">
-                <h6 class="num">11</h6>
-                <h6>comments</h6>
+                <h6 class="num">{{ postCount }}</h6>
+                <h6>posts</h6>
             </div>
-            <div class="vote">
+            <!-- <div class="vote">
                 <h6 class="num">201</h6>
                 <h6>votes</h6>
-            </div>
+            </div> -->
         </div>
+
+        {% if user.isBanned == 1 %}
+            <h4>User is banned</h4>
+        {% endif %}
 
         
 

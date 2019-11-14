@@ -28,6 +28,8 @@ class ProfileController extends AbstractController
 
         $posts = $postRepository->findPostWithUser($user->getId());
 
+        $postCount = $postRepository->findUserPostCount($user->getId());
+
         $bIsProfile = false;
 
         if ($user->getId() == $this->getUser()->getId()) {
@@ -37,7 +39,8 @@ class ProfileController extends AbstractController
         return $this->render('home/custom.html.twig', [
             'user' => $user,
             'posts' => $posts,
-            'isProfile' => $bIsProfile
+            'isProfile' => $bIsProfile,
+            'postCount' => $postCount
         ]);
     }
 
@@ -52,10 +55,13 @@ class ProfileController extends AbstractController
 
         $posts = $postRepository->findPostWithUser($this->getUser()->getId());
 
+        $postCount = $postRepository->findUserPostCount($user->getId());
+
         return $this->render('home/custom.html.twig', [
             'user' => $user,
             'posts' => $posts,
-            'isProfile' => true
+            'isProfile' => true,
+            'postCount' => $postCount
         ]);
     }
 
