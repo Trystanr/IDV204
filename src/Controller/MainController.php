@@ -15,13 +15,14 @@ class MainController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function index(UserRepository $userRepository){
+    public function index(){
+        if (null !== $this->getUser()) {
+            
+            return $this->redirect($this->generateUrl('profile_route'));
+        } else {
+            return $this->redirect($this->generateUrl('app_login'));
+        }
 
-        $users = $userRepository->findAll();
-
-        return $this->render('home/custom.html.twig', [
-            'users' => $users
-        ]);
     }
 
     /**

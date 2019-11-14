@@ -2,10 +2,8 @@
 <link rel="stylesheet" href="{{ asset('css/profile.css') }}"> {% endblock %} {% block body %}
 <div class="container">
     <div class="profile-container">
-        <div class="profile"><img src="{{ asset('uploads/profile.jpg') }}" alt="Symfony" /></div>
-        {% for user in users %}
+        <div class="profile"><img src="{{'/uploads/' ~ user.image}}" alt="Symfony" /></div>
         <h1 class="head">{{user.username}}</h1>
-        {% endfor %}
         <div class="line"></div>
         <div class="profile-content">
             <div class="comment">
@@ -17,37 +15,45 @@
                 <h6>votes</h6>
             </div>
         </div>
-        <div class="profile-button">Edit my profile</div>
+
+        
+
+        {% if isProfile %}
+        
+            <div class="profile-button">Edit my profile</div>
+        
+        {% else %}
+
+            {% if is_granted('ROLE_ADMIN') %}
+                {% if user.isBanned == 1 %}
+                    <a class="profile-button" href="{{ path('unban', {id: user.id}) }}">Unban User</a>
+                {% endif %}
+
+                {% if user.isBanned == 0 %}
+                    <a class="profile-button ban-button" href="{{ path('ban', {id: user.id}) }}">Ban User</a>
+                {% endif %}
+            {% endif %}
+
+        {% endif %}
 
     </div>
 
     <div class="profile-detail">
 
         <div class="summary">
-            <div class="sum-head">Questions</div>
-            <div class="line"></div>
-            <div class="question-sum">
-                <img src="{{ asset('uploads/profile.jpg') }}" alt="Symfony" />
-                <h2 class="question-head">Who is the fullback for Wales?</h2>
-            </div>
-            <div class="question-sum">
-                <img src="{{ asset('uploads/profile.jpg') }}" alt="Symfony" />
-                <h2 class="question-head">What is an NBA player deemed to be if he has received the Maurice Podoloff Trophy? </h2>
-            </div>
-
-            <div class="sum-head">Comments</div>
+            <div class="sum-head">Summary</div>
             <div class="line"></div>
 
-            <div class="comment-sum">
-                <div class="question-head">
-                    <img src="{{ asset('uploads/profile.jpg') }}" alt="Symfony" />
-                    <h2 class="question">Who is the fullback for Wales?</h2>
+            {% for post in posts %}
+                <div class="question-sum">
+                    <a href="{{path('post.show', {id: post.id}) }}">
+                        <img src="{{'/uploads/' ~ user.image}}" alt="Symfony" />
+                        <h2 class="question-head">{{ post.title }}</h2>
+                    </a>
                 </div>
-                <div class="comment-container">
-                    <img src="{{ asset('uploads/profile.jpg') }}" alt="Symfony" />
-                    <h2 class="comment">Liam Williams</h2>
-                </div>
-            </div>
+            {% endfor %}
+
+        
         </div>
 
 

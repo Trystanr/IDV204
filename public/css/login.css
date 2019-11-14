@@ -227,6 +227,18 @@ h2 {
     border-radius: 1000px;
 }
 
+.question-container h3 a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 2px;
+    border-radius: 1000px;
+}
+
+.question-container h3 {
+    color: #828282;
+    font-size: 16px;
+}
+
 .post-comments ul li h3 {
     display: block;
     float: none;

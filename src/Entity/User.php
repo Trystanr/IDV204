@@ -43,6 +43,11 @@ class User implements UserInterface
      */
     private $password;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $isBanned = 0;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -141,6 +146,19 @@ class User implements UserInterface
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getIsBanned(): ?int
+    {
+
+        return $this->isBanned;
+    }
+
+    public function setIsBanned(int $banStatus): self
+    {
+        $this->isBanned = $banStatus;
 
         return $this;
     }
