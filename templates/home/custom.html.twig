@@ -3,9 +3,10 @@
 <div class="container">
     <div class="profile-container">
         <div class="profile"><img src="{{ asset('uploads/profile.jpg') }}" alt="Symfony" /></div>
-        <h1 class="head">James Patterson</h1>
+        {% for user in users %}
+        <h1 class="head">{{user.username}}</h1>
+        {% endfor %}
         <div class="line"></div>
-
         <div class="profile-content">
             <div class="comment">
                 <h6 class="num">11</h6>

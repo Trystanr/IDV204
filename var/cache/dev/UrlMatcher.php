@@ -13,12 +13,13 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\MainController::index'], null, null, null, false, false, null]],
         '/post' => [[['_route' => 'post.index', '_controller' => 'App\\Controller\\PostController::index'], null, null, null, true, false, null]],
         '/post/create' => [[['_route' => 'post.create', '_controller' => 'App\\Controller\\PostController::create'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\ProfileController::index'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
+        '/create' => [[['_route' => 'question_create_route', '_controller' => 'App\\Controller\\PostController::create'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -36,14 +37,14 @@ return [
                         .'|(*:124)'
                     .')'
                 .')'
-                .'|/c(?'
-                    .'|ustom(?:/([^/]++))?(*:158)'
-                    .'|ategory/([^/]++)(*:182)'
-                .')'
                 .'|/post/(?'
-                    .'|category/([^/]++)(*:217)'
-                    .'|show/([^/]++)(*:238)'
-                    .'|delete/([^/]++)(*:261)'
+                    .'|category/([^/]++)(*:160)'
+                    .'|show/([^/]++)(*:181)'
+                    .'|delete/([^/]++)(*:204)'
+                .')'
+                .'|/c(?'
+                    .'|ustom/(\\d+)(*:229)'
+                    .'|ategory/([^/]++)(*:253)'
                 .')'
             .')/?$}sDu',
     ],
@@ -54,12 +55,12 @@ return [
         101 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception::showAction'], ['token'], null, null, false, false, null]],
         114 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'], ['token'], null, null, false, false, null]],
         124 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        158 => [[['_route' => 'custom', 'name' => null, '_controller' => 'App\\Controller\\MainController::custom'], ['name'], null, null, false, true, null]],
-        182 => [[['_route' => 'category_route', '_controller' => 'App\\Controller\\PostController::findByCat'], ['cat'], null, null, false, true, null]],
-        217 => [[['_route' => 'post.category', '_controller' => 'App\\Controller\\PostController::findByCat'], ['cat'], null, null, false, true, null]],
-        238 => [[['_route' => 'post.show', '_controller' => 'App\\Controller\\PostController::show'], ['id'], null, null, false, true, null]],
-        261 => [
-            [['_route' => 'post.delete', '_controller' => 'App\\Controller\\PostController::remove'], ['id'], null, null, false, true, null],
+        160 => [[['_route' => 'post.category', '_controller' => 'App\\Controller\\PostController::findByCat'], ['cat'], null, null, false, true, null]],
+        181 => [[['_route' => 'post.show', '_controller' => 'App\\Controller\\PostController::show'], ['id'], null, null, false, true, null]],
+        204 => [[['_route' => 'post.delete', '_controller' => 'App\\Controller\\PostController::remove'], ['id'], null, null, false, true, null]],
+        229 => [[['_route' => 'custom', '_controller' => 'App\\Controller\\ProfileController::custom'], ['id'], null, null, false, true, null]],
+        253 => [
+            [['_route' => 'category_route', '_controller' => 'App\\Controller\\PostController::findByCat'], ['cat'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

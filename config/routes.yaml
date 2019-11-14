@@ -9,3 +9,9 @@
 category_route:
     path:       /category/{cat}
     controller: App\Controller\PostController::findByCat
+
+question_create_route:
+    path:       /create
+    controller: App\Controller\PostController::create
+
+    
