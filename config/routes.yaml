@@ -22,4 +22,7 @@ question_create_route:
     path:       /create
     controller: App\Controller\PostController::create
 
+profile_edit_route:
+    path:       /edit
+    controller: App\Controller\ProfileController::edit
     

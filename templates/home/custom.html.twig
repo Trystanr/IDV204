@@ -17,28 +17,12 @@
         </div>
 
         {% if user.isBanned == 1 %}
-            <h4>User is banned</h4>
-        {% endif %}
+        <h4>User is banned</h4>
+        {% endif %} {% if isProfile %}
 
-        
-
-        {% if isProfile %}
-        
-            <div class="profile-button">Edit my profile</div>
-        
-        {% else %}
-
-            {% if is_granted('ROLE_ADMIN') %}
-                {% if user.isBanned == 1 %}
-                    <a class="profile-button" href="{{ path('unban', {id: user.id}) }}">Unban User</a>
-                {% endif %}
-
-                {% if user.isBanned == 0 %}
-                    <a class="profile-button ban-button" href="{{ path('ban', {id: user.id}) }}">Ban User</a>
-                {% endif %}
-            {% endif %}
-
-        {% endif %}
+        <a class="profile-button" href="{{ path('profile_edit_route') }}">Edit my profile</a> {% else %} {% if is_granted('ROLE_ADMIN') %} {% if user.isBanned == 1 %}
+        <a class="profile-button" href="{{ path('unban', {id: user.id}) }}">Unban User</a> {% endif %} {% if user.isBanned == 0 %}
+        <a class="profile-button ban-button" href="{{ path('ban', {id: user.id}) }}">Ban User</a> {% endif %} {% endif %} {% endif %}
 
     </div>
 
@@ -49,15 +33,15 @@
             <div class="line"></div>
 
             {% for post in posts %}
-                <div class="question-sum">
-                    <a href="{{path('post.show', {id: post.id}) }}">
-                        <img src="{{'/uploads/' ~ user.image}}" alt="Symfony" />
-                        <h2 class="question-head">{{ post.title }}</h2>
-                    </a>
-                </div>
+            <div class="question-sum">
+                <a href="{{path('post.show', {id: post.id}) }}">
+                    <img src="{{'/uploads/' ~ user.image}}" alt="Symfony" />
+                    <h2 class="question-head">{{ post.title }}</h2>
+                </a>
+            </div>
             {% endfor %}
 
-        
+
         </div>
 
 

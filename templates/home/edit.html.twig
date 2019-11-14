@@ -1,4 +1,12 @@
-{% extends ('base.html.twig') %} {% block body %}
-<h1>Edit Profile</h1>
-<div> {{ form(form) }}</div>
+{% extends ('base.html.twig') %} {% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/profile.css') }}"> {% endblock %}{% block body %}
+<div class="container">
+    <h1>Edit Profile</h1>
+    <div class="form-container">
+        <div> {{ form(form) }}</div>
+    </div>
+    <div class="illustration-container">
+        <div><img src="{{ asset('uploads/runner.png') }}" alt="Symfony" /></div>
+    </div>
+</div>
 {% endblock %}

@@ -1,6 +1,6 @@
 {% extends('base.html.twig') %} {% block body %}
 <div class='container'>
-    
+
     <h1>
         {{ catName }}
     </h1>
@@ -14,14 +14,12 @@
             <div class="question-block">
                 <div class="profile-image"></div>
                 <div class="question">
-                    <a class="title" href="{{path('post.show', {id: post.id}) }}">{{ post.title }}</a>
-                    {% if is_granted('ROLE_ADMIN') %}
+                    <a class="title" href="{{path('post.show', {id: post.id}) }}">{{ post.title }}</a> {% if is_granted('ROLE_ADMIN') %}
                     <a class="text-danger" href="{{ path('post.delete', {id: post.id}) }}">
                         X
-                    </a>
-                    {% endif %}
+                    </a> {% endif %}
                 </div>
-                
+
                 <div class="category"><a href="{{ path('category_route', {cat: post.category.id}) }}">{{ post.category }}</a></div>
 
                 <div class="votes-container">
@@ -42,7 +40,60 @@
         </div>
 
         <div class="feature-container">
-            <a href="{{ path('category_route', {cat: 1}) }}">Soccer</a>
+            <div class="column">
+                <div class="cat-container">
+                    <a href="{{ path('category_route', {cat: 1}) }}">
+                        <img src="{{'/uploads/soccer.png'}}" alt="Symfony" /> Soccer
+                    </a>
+                </div>
+                <div class="cat-container">
+                    <a href="{{ path('category_route', {cat: 2}) }}">
+                        <img src="{{'/uploads/cricket.png'}}" alt="Symfony" /> Cricket
+                    </a>
+                </div>
+                <div class="cat-container">
+                    <a href="{{ path('category_route', {cat: 3}) }}">
+                        <img src="{{'/uploads/rugby.png'}}" alt="Symfony" /> Rugby
+                    </a>
+                </div>
+                <div class="cat-container">
+                    <a href="{{ path('category_route', {cat: 4}) }}">
+                        <img src="{{'/uploads/basketball.png'}}" alt="Symfony" /> Basketball
+                    </a>
+                </div>
+                <div class="cat-container">
+                    <a href="{{ path('category_route', {cat: 5}) }}">
+                        <img src="{{'/uploads/football.png'}}" alt="Symfony" /> Football
+                    </a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="cat-container">
+                    <a href="{{ path('category_route', {cat: 6}) }}">
+                        <img src="{{'/uploads/tennis.png'}}" alt="Symfony" /> Tennis
+                    </a>
+                </div>
+                <div class="cat-container">
+                    <a href="{{ path('category_route', {cat: 7}) }}">
+                        <img src="{{'/uploads/hockey.png'}}" alt="Symfony" /> Hockey
+                    </a>
+                </div>
+                <div class="cat-container2">
+                    <a href="{{ path('category_route', {cat: 8}) }}">
+                        <img src="{{'/uploads/golf.png'}}" alt="Symfony" /> Golf
+                    </a>
+                </div>
+                <div class="cat-container">
+                    <a href="{{ path('category_route', {cat: 9}) }}">
+                        <img src="{{'/uploads/baseball.png'}}" alt="Symfony" /> Baseball
+                    </a>
+                </div>
+                <div class="cat-container">
+                    <a href="{{ path('category_route', {cat: 10}) }}">
+                        <img src="{{'/uploads/volley.png'}}" alt="Symfony" /> Volleyball
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -105,4 +105,39 @@ class ProfileController extends AbstractController
 
     }
 
+     /**
+     * @Route("/edit", name="edit")
+     * @return Response
+     */
+    public function edit(Request $request){
+
+        $user = $this->getUser();
+        
+        $form = $this->createForm(EditType::class, $user);
+
+        $form->handleRequest($request);
+        $form->getErrors();
+        if($form->isSubmitted()){
+             //entity manager
+            
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($user);
+            $em->flush();
+            
+
+            return $this->redirect($this->generateUrl('post.index'));
+        }
+
+        //return a response
+
+        return $this->render('home/edit.html.twig', [
+            'form' => $form->createView()
+        ]);
+
+
+    }
+
+
+
+
 }
