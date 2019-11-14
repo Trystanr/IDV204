@@ -71,7 +71,7 @@ class PostController extends AbstractController
         // create a new post with title
         $post = new Post();
 
-        $credentials = new Aws\Credentials\Credentials('AKIAIBLUPXSU6HFSK3SQ', 'lHD86lwAtR/HsWZiDk4EQS2GHON5LodvFdVD4pVO');
+        $credentials = new Credentials('AKIAIBLUPXSU6HFSK3SQ', 'lHD86lwAtR/HsWZiDk4EQS2GHON5LodvFdVD4pVO');
 
         $s3 = new S3Client([
             'version'  => 'latest',
