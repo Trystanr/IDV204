@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     padding: 30px;
-    height: 300px;
+    /*height: 300px;*/
 }
 
 .rules-container {
@@ -119,4 +119,45 @@ li {
     margin-bottom: 20px;
     align-self: center;
     margin-left: 10px;
+}
+
+#post_category {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#post_category .form-check input[type="radio"] {
+    display: none;
+}
+
+#post_category .form-check input[type="radio"]:checked+label {
+    background-color: #e8e8f9;
+}
+
+#post_category .form-check label {
+    padding: 50px 50px;   
+
+    color: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #fff;
+    border: 1px solid #291d891a;
+
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+    border-radius: 10px;
+}
+
+#post_category .form-check label:hover {
+    cursor: pointer;
+
+    background-color: #e8e8f938;
+}
+
+.form-check {
+    padding-left: 0rem;
 }

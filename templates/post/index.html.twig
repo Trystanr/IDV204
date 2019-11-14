@@ -5,7 +5,7 @@
         {{ catName }}
     </h1>
 
-    <a href="{{ path('question_create_route') }}" class="button">Ask a Question</a>
+    
 
     <div id="list-container">
         <div class="question-container">
@@ -42,6 +42,7 @@
         </div>
 
         <div class="feature-container">
+            <a href="{{ path('question_create_route') }}" class="button">Ask a Question</a>
             <a href="{{ path('category_route', {cat: 1}) }}">Soccer</a>
         </div>
     </div>
