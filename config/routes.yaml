@@ -10,7 +10,6 @@ category_route:
     path:       /category/{cat}
     controller: App\Controller\PostController::findByCat
 
-
 profile_route:
     path:       /profile
     controller: App\Controller\ProfileController::profile

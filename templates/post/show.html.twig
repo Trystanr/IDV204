@@ -6,7 +6,7 @@
 	<div id="post-body">
 		<div class="question-container">
 		    <h1 class="title">{{ post.title }}</h1>
-		    <h3>Asked by <a href="{{ path('user_route', {id: post.user.id}) }}">{{ post.user.username }}</a></h3>
+		    <h3>Asked by <a href="{{ path('user_route', {id: post.user.id}) }}"> <img src="{{'/uploads/' ~ post.user.image}}"> {{ post.user.username }}</a></h3>
 		    <div class="category"><a href="{{ path('category_route', {cat: post.category.id}) }}">{{ post.category }}</a></div>
 		    <div class="line"></div>
 		    <img class="post" src="{{'/uploads/' ~ post.image}}" >
@@ -27,7 +27,7 @@
 			        	{% if post.comment is not null %}
 			        	    <li>
 			        	    	<div class="user">
-			        	    		<img src="/uploads/27c4f7c85ade55d1fa038bab00795ffc.jpeg">
+			        	    		<img src="{{'/uploads/' ~ post.comment.user.image}}">
 			        	    		<h3><a href="{{ path('user_route', {id: post.comment.user.id}) }}">{{ post.comment.user.username }}</a></h3>
 			        	    	</div>
 			        	    	

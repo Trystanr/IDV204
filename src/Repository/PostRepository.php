@@ -32,6 +32,17 @@ class PostRepository extends ServiceEntityRepository
         return $query->execute();
     }
 
+    public function findPostWithUser(int $id){   
+
+        $qb = $this->createQueryBuilder('p')
+            ->where('p.user = :id')
+            ->setParameter('id', $id);
+
+        $query = $qb->getQuery();
+
+        return $query->execute();
+    }
+
     public function findSingle(int $cat){   
 
         $qb = $this->createQueryBuilder('p')
