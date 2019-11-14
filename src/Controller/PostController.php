@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Controller;
 
 use App\Entity\Post;
@@ -15,6 +16,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 use Psr\Log\LoggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+
+use Aws\S3\S3Client;
 
 /**
  * * @Route("/post", name="post.")
@@ -67,6 +70,13 @@ class PostController extends AbstractController
         // create a new post with title
         $post = new Post();
 
+        $s3 = new S3Client([
+            'version'  => '2006-03-01',
+            'region'   => 'eu-stockholm',
+        ]);
+
+        $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!');
+
         $form = $this->createForm(PostType::class, $post);
 
         $form->handleRequest($request);
@@ -85,6 +95,14 @@ class PostController extends AbstractController
 
             if($file){
                 $filename = md5(uniqid()) . '.' . $file->guessClientExtension();
+                
+                try {
+                    // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
+                    $upload = $s3->upload($bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
+                } catch(Exception $e) {
+
+                }
+
                 $file->move(
                     $this->getParameter('uploads_dir'),
                     $filename
