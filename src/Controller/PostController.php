@@ -71,8 +71,8 @@ class PostController extends AbstractController
         $post = new Post();
 
         $s3 = new S3Client([
-            'version'  => '2006-03-01',
-            'region'   => 'eu-stockholm',
+            'version'  => 'latest',
+            'region'   => 'eu-north-1',
         ]);
 
         $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!');
