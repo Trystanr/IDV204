@@ -96,7 +96,12 @@ class PostController extends AbstractController
 
             if($file){
                 $filename = md5(uniqid()) . '.' . $file->guessClientExtension();
-                
+
+                $file->move(
+                    $this->getParameter('uploads_dir'),
+                    $filename
+                );
+
                 try {
                     // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
                     // $upload = $s3->upload($bucket, $filename, $file, 'public-read');
@@ -104,7 +109,9 @@ class PostController extends AbstractController
                     $upload = $s3->putObject([
                         'Bucket' => $bucket, // REQUIRED
                         'Key' => $filename, // REQUIRED
-                        'Body' => $file
+                        'SourceFile' => $this->getParameter('uploads_dir').$filename,
+                        'ContentType' => 'image/jpeg',
+                        'ACL' => 'public-read'
                     ]);
 
                     $key = $filename;
@@ -112,11 +119,6 @@ class PostController extends AbstractController
                 } catch(Exception $e) {
 
                 }
-
-                $file->move(
-                    $this->getParameter('uploads_dir'),
-                    $filename
-                );
 
                 $post->setImage($filename);
                 $em->persist($post);
