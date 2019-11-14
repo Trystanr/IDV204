@@ -98,7 +98,16 @@ class PostController extends AbstractController
                 
                 try {
                     // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
-                    $upload = $s3->upload($bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
+                    $upload = $s3->upload($bucket, $filename, $file, 'public-read');
+
+                    $key = $filename;
+
+                    $result = $s3->putObject([
+                        'Bucket' => $bucket,
+                        'Key'    => $key,
+                        'SourceFile' => $file
+                    ]);
+
                 } catch(Exception $e) {
 
                 }
