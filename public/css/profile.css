@@ -156,6 +156,7 @@
     letter-spacing: 1px;
     margin: 0 auto;
     margin-top: 30px;
+        text-align: center;
 }
 
 .profile-button:hover {

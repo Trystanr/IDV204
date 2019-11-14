@@ -29,11 +29,35 @@ class ProfileController extends AbstractController
      * @Route("/custom/{id}", name="custom", requirements={"id"="\d+"}))
      * @return Response
      */
-    public function custom(User $user){
+    public function custom(UserRepository $userRepository, $id){
         //create the show view
 
+        $user = $userRepository->find($id);
+
+        $bIsProfile = false;
+
+        if ($user->getId() == $this->getUser()->getId()) {
+            $bIsProfile = true;
+        }
+
         return $this->render('home/custom.html.twig', [
-            'user' => $user
+            'user' => $user,
+            'isProfile' => $bIsProfile
+        ]);
+    }
+
+    /**
+     * @Route("/profile", name="profile")
+     * @return Response
+     */
+    public function profile(){
+        //create the show view
+
+        $user = $this->getUser();
+
+        return $this->render('home/custom.html.twig', [
+            'user' => $user,
+            'isProfile' => true
         ]);
     }
 

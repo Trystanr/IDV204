@@ -3,9 +3,7 @@
 <div class="container">
     <div class="profile-container">
         <div class="profile"><img src="{{ asset('uploads/profile.jpg') }}" alt="Symfony" /></div>
-        {% for user in users %}
         <h1 class="head">{{user.username}}</h1>
-        {% endfor %}
         <div class="line"></div>
         <div class="profile-content">
             <div class="comment">
@@ -17,7 +15,10 @@
                 <h6>votes</h6>
             </div>
         </div>
-        <div class="profile-button">Edit my profile</div>
+
+        {% if isProfile %}
+            <div class="profile-button">Edit my profile</div>
+        {% endif %}
 
     </div>
 

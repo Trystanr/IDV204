@@ -10,6 +10,15 @@ category_route:
     path:       /category/{cat}
     controller: App\Controller\PostController::findByCat
 
+
+profile_route:
+    path:       /profile
+    controller: App\Controller\ProfileController::profile
+
+user_route:
+    path:       /custom/{id}
+    controller: App\Controller\ProfileController::custom
+
 question_create_route:
     path:       /create
     controller: App\Controller\PostController::create
