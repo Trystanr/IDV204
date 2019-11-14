@@ -10,7 +10,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class MainController extends AbstractController
+
+class ProfileController extends AbstractController
 {
     /**
      * @Route("/", name="home")
@@ -26,11 +27,14 @@ class MainController extends AbstractController
 
     /**
      * @Route("/custom/{id}", name="custom", requirements={"id"="\d+"}))
+     * @return Response
      */
     public function custom(User $user){
+        //create the show view
 
         return $this->render('home/custom.html.twig', [
             'user' => $user
         ]);
     }
+
 }
